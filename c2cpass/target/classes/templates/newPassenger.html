@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add New Passenger</title>
+</head>
+<body>
+    <h2><b>Add New Passenger</b></h2>
+    <form action="/savePassenger" th:object="${passenger}" method="post">
+        <label>User ID:</label>
+        <input type="text" th:field="*{userId}" enabled="true"/><br/>
+		
+        <label>Visa Type:</label>
+        <input type="text" th:field="*{visaType}"/><br/>
+		
+        <label>Name:</label>
+        <input type="text" th:field="*{name}"/><br/>
+		
+        <label>Mobile No:</label>
+        <input type="text" th:field="*{mobileNo}"/><br/>
+		
+        <label>Email:</label>
+        <input type="text" th:field="*{email}"/><br/>
+		
+        <label>Visa Expiry Date:</label>
+        <input type="date" th:field="*{visaExpDate}"/><br/>
+		
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
